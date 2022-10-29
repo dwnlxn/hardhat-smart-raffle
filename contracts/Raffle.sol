@@ -55,7 +55,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
         uint256 entranceFee,
         bytes32 gasLane,
         uint64 subscriptionId,
-        uint16 callbackGasLimit,
+        uint32 callbackGasLimit,
         uint256 interval
     ) VRFConsumerBaseV2(vrfCoordinatorV2) {
         i_entranceFee = entranceFee;
@@ -162,7 +162,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
         return s_recentWinner;
     }
 
-    function getRaffleStage() public view returns (RaffleState) {
+    function getRaffleState() public view returns (RaffleState) {
         return s_raffleState;
     }
 
