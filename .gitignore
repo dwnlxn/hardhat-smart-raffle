@@ -6,3 +6,5 @@ artifacts
 cache
 coverage
 coverage.json
+deployments
+.vscode
